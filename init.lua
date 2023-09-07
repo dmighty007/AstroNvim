@@ -21,3 +21,10 @@ if astronvim.default_colorscheme then
 end
 
 require("astronvim.utils").conditional_func(astronvim.user_opts("polish", nil, false), true)
+vim.cmd[[highlight MatchParen ctermbg=blue guibg=lightblue]]
+vim.keymap.set({ 'n', 'v', 'i' },'<F2>', function() require("knap").toggle_autopreviewing() end)
+vim.cmd[[colorscheme nightfly]]
+vim.g['tex_flavor'] = "latex"
+vim.wo.wrap = true
+vim.wo.linebreak = true
+vim.wo.list = false -- extra option I set in addition to the ones in your question 
